@@ -1,0 +1,15 @@
+{
+  "name": "inventory_management",
+  "version": "1.0.0",
+  "description": "Launch Inventory Management Web App in electron desktopas desktop app with electron framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "InventoryManager": "electron ."
+  },
+  "author": "khang",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^30.0.6"
+  }
+}
