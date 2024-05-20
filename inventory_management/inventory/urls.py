@@ -2,6 +2,9 @@ from django.contrib import admin
 from django.urls import path
 from .views import Index, SignUpView, Dashboard, AddItem, EditItem, DeleteItem
 from django.contrib.auth import views as auth_views
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('', Index.as_view(), name='index'),
@@ -13,4 +16,4 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='inventory/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='inventory/logout.html'), name='logout'),
 
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
